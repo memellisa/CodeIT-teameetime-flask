@@ -140,14 +140,14 @@ def count_score(mid, asteroid):
         # print(curr_count, "A")
         curr_count = 0
 
-        if curr_count <= 6:
-            total_score += curr_count
-        elif curr_count >= 10:
-            total_score += 2 * curr_count
-        else:
-            total_score += 1.5 * curr_count
-        
-        return float(total_score)
+    if curr_count <= 6:
+        total_score += curr_count
+    elif curr_count >= 10:
+        total_score += 2 * curr_count
+    else:
+        total_score += 1.5 * curr_count
+    
+    return float(total_score)
 
 
 def find_score(ast):
