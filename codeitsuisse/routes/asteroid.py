@@ -21,8 +21,8 @@ def evaluateAsteroid():
         temp_dict = {}
         if temp_res != None:
             temp_dict["input"] = testcase
-            temp_dict["score"] = temp_res[0]
-            temp_dict["origin"] = temp_res[1]
+            temp_dict["score"] = temp_res[1]
+            temp_dict["origin"] = temp_res[0]
         else:
             temp_dict["input"] = testcase
             temp_dict["score"] = 0
