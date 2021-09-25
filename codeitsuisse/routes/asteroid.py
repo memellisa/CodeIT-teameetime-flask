@@ -128,7 +128,7 @@ def count_score(mid, asteroid):
         if right_index != len(asteroid) - 1 and asteroid[right_index + 1] == asteroid[refer]:
             curr_count += 1
             right_index += 1
-        if asteroid[left_index - 1] != asteroid[refer] and asteroid[right_index + 1 ] != asteroid[refer]:
+        if asteroid[left_index - 1] != asteroid[refer] and asteroid[right_index + 1] != asteroid[refer]:
             if asteroid[left_index - 1] != asteroid[right_index + 1]:
                 break
         # print("hello")
@@ -194,3 +194,4 @@ def find_score(ast):
         mid_of_mid_patt = mid_index_start + mid_of_mid_patt
         print(mid_of_mid_patt)
         print(count_score(mid_of_mid_patt, ast))
+        return mid_of_mid_patt, count_score(mid_of_mid_patt, ast)
