@@ -95,7 +95,7 @@ def find_score(ast):
         for i in range(len(pattern_to_mid)):
             while ast[mid_index_start] == pattern_to_mid[i]:
                 mid_index_start += 1
-            i += 1
+            
             
         mid_of_mid_patt = 0
 
