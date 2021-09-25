@@ -16,7 +16,7 @@ def evaluateAsteroid():
 
     result = []
 
-    for testcase in data:
+    for testcase in data["test_cases"]:
         temp_res = find_score(testcase)
         temp_dict = {}
         if temp_res != None:
