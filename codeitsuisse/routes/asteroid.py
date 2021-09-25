@@ -80,7 +80,7 @@ def count_score(mid, asteroid):
     else:
         total_score += 1.5 * curr_count
     
-    return total_score
+    return int(total_score)
 
 
 def find_score(ast):
