@@ -41,6 +41,8 @@ def evaluateStockHunter():
                 grid[y].append(convert_to_letter(tem, gridDepth, gridKey))
             # print(ri)
         
+        print(grid)
+
         temp_dict = {}
         temp_dict["gridMap"] = [grid[key] for key in grid]
 
