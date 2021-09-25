@@ -20,7 +20,7 @@ def evaluateAsteroid():
         temp_dict["input"] = testcase
         temp_dict["score"] = temp_res[0]
         temp_dict["origin"] = temp_res[1]
-        result.append = temp_dict
+        result.append(temp_dict)
 
     return jsonify(result)
 
