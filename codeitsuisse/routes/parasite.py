@@ -16,7 +16,8 @@ def evaluateParasite():
 
     result = []
 
-    result.append(find_sol(data))
+    for testcase in data:
+        result.append(find_sol(testcase))
 
     print(result)
     print(jsonify(result))
@@ -199,27 +200,27 @@ def p1(grid, row, col):
     return (str(row-1)+","+str(col-1), timer)
 
 
-def find_sol(inputs):
+def find_sol(input):
     output = {}
-    for input in inputs:
+    
         
-        roomNumber = input["room"]
-        grid = input["grid"]
-        interestedIndividuals = input["interestedIndividuals"]
-        p1_ans = {}
-        for individual in interestedIndividuals:
-            (key, value) = p1(
-                grid, int(individual[0]), int(individual[2]))
-            p1_ans[key] = value
-        p2_ans = p2(grid)
-        p3_ans = p3(grid)
+    roomNumber = input["room"]
+    grid = input["grid"]
+    interestedIndividuals = input["interestedIndividuals"]
+    p1_ans = {}
+    for individual in interestedIndividuals:
+        (key, value) = p1(
+            grid, int(individual[0]), int(individual[2]))
+        p1_ans[key] = value
+    p2_ans = p2(grid)
+    p3_ans = p3(grid)
 
-        output["room"] = roomNumber
-        output["p1"] = p1_ans
-        output["p2"] = p2_ans
-        output["p3"] = p3_ans
-        
-        #change this 
-        output["p4"] = 0
+    output["room"] = roomNumber
+    output["p1"] = p1_ans
+    output["p2"] = p2_ans
+    output["p3"] = p3_ans
+    
+    #change this 
+    output["p4"] = 0
     
     return output
