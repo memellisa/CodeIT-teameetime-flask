@@ -8,7 +8,7 @@ from codeitsuisse import app
 logger = logging.getLogger(__name__)
 
 @app.route('/tic-tac-toe', methods=['POST'])
-def evaluateSquare():
+def evaluateTicTacToe():
     data = request.get_json()
     print(data)
 
