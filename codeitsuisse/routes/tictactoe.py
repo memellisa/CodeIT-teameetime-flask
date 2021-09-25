@@ -14,7 +14,7 @@ def evaluateTicTacToe():
 
     headers = {'Accept': 'text/event-stream'}
 
-    event = requests.get("https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"], stream=True, headers=headers)
+    event = requests.get("https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"], stream=True, headers=headers).json()
 
     print(data)
     print(event)
