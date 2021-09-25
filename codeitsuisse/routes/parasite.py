@@ -209,8 +209,9 @@ def find_sol(input):
     interestedIndividuals = input["interestedIndividuals"]
     p1_ans = {}
     for individual in interestedIndividuals:
+        temp = individual.split(',')
         (key, value) = p1(
-            grid, int(float(individual[0])), int(float(individual[2])))
+            grid, int(float(temp[0])), int(float(temp[1])))
         p1_ans[key] = value
     p2_ans = p2(grid)
     p3_ans = p3(grid)
