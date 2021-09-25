@@ -138,7 +138,7 @@ def count_score(mid, asteroid):
             else:
                 total_score += 1.5 * curr_count
         # print(curr_count, "A")
-        curr_count = 0
+            curr_count = 0
 
     if curr_count <= 6:
         total_score += curr_count
