@@ -16,8 +16,7 @@ def evaluateParasite():
 
     result = []
 
-    for testcase in data:
-        result.append(find_sol(testcase))
+    result.append(find_sol(data))
 
     print(result)
     print(jsonify(result))
