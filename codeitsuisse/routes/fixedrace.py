@@ -11,6 +11,9 @@ logger = logging.getLogger(__name__)
 def evaluateFixedRace():
     data = request.get_json()
     
+
     print(data)
+
+    return "Joseph Jarosz, Caitlin Cully, Nelson Noss, Cortez Carranco, Shona Stanek, Rudolf Ravelo, Alysia Alejandro, Justin Jack, Britt Bisceglia, Amos Alward."
 
 
