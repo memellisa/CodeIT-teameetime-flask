@@ -120,10 +120,10 @@ def count_score(mid, asteroid):
 
     while left_index != 0 or right_index != len(asteroid) - 1:
         print(left_index, right_index)
-        if asteroid[left_index - 1] == asteroid[refer] and left_index != 0:
+        if left_index != 0 and asteroid[left_index - 1] == asteroid[refer] and :
             curr_count += 1
             left_index -= 1
-        if asteroid[right_index + 1] == asteroid[refer] and right_index != len(asteroid) - 1:
+        if right_index != len(asteroid) - 1 and asteroid[right_index + 1] == asteroid[refer]:
             curr_count += 1
             right_index += 1
         if asteroid[left_index - 1] != asteroid[refer] and asteroid[right_index + 1 ] != asteroid[refer]:
