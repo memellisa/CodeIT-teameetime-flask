@@ -52,7 +52,7 @@ def evaluateStockHunter():
         newGrid= getNewGrid(gridMap)
         neighbors = getNeighbors(newGrid)
         # print(neighbors)
-        minCost = findPath(neighbors,(0,0),(2,2))
+        minCost = findPath(neighbors, entryPoint, targetPoint)
         print("Min cost ",minCost)
 
         temp_dict["minimumCost"] = minCost
