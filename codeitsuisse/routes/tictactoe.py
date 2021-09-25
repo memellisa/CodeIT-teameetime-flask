@@ -23,7 +23,8 @@ def evaluateTicTacToe():
 
     client = sseclient.SSEClient(event)
     for event in client.events():
-        pprint.pprint(json.loads(event.data))
+        # pprint.pprint(json.loads(event.data))
+        print(event.data)
     
 
 
