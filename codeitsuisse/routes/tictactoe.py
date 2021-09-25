@@ -16,15 +16,25 @@ def evaluateTicTacToe():
 
     headers = {'Accept': 'text/event-stream'}
 
-    event = requests.get("https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"], stream=True, headers=headers)
+    url = "https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"]
+    print(url)
+    stream_response = requests.get(url, stream=True)
 
-    print(data)
-    print(event.data)
+    # event = requests.get("https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"], stream=True, headers=headers)
+    client = sseclient.SSEClient(stream_response)
 
-    client = sseclient.SSEClient(event)
+
     for event in client.events():
-        # pprint.pprint(json.loads(event.data))
-        print(event.data)
+        print ("got a new event from server")
+        pprint.pprint(event.data)
+
+    # print(data)
+    # print(event.data)
+
+    # client = sseclient.SSEClient(event)
+    # for event in client.events():
+    #     # pprint.pprint(json.loads(event.data))
+    #     print(event.data)
     
 
 
