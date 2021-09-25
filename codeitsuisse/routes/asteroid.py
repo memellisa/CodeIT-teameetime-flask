@@ -103,6 +103,7 @@ def find_score(ast):
             mid_of_mid_patt += 1
         mid_of_mid_patt = mid_of_mid_patt // 2
 
+        print(mid_of_mid_patt)
         mid_of_mid_patt = mid_index_start + mid_of_mid_patt
 
         return mid_of_mid_patt, count_score(mid_of_mid_patt, ast)
