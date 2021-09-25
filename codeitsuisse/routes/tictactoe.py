@@ -19,7 +19,7 @@ def evaluateTicTacToe():
     event = requests.get("https://cis2021-arena.herokuapp.com/tic-tac-toe/start/" + data["battleId"], stream=True, headers=headers)
 
     print(data)
-    print(event)
+    print(event.data)
 
     client = sseclient.SSEClient(event)
     for event in client.events():
