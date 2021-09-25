@@ -177,6 +177,7 @@ def find_score(ast):
 
         return mid_of_mid_patt, count_score(mid_of_mid_patt, ast)
     else:
+        print("NOT PALINDROME")
         longest = findLongestPalindromicString(process)
         pattern_to_mid = [char for char in process[0:process.find(longest) + len(longest)//2]]
 
