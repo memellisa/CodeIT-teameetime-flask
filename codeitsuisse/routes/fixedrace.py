@@ -14,6 +14,6 @@ def evaluateFixedRace():
 
     print(data)
 
-    return "Joseph Jarosz, Caitlin Cully, Nelson Noss, Cortez Carranco, Shona Stanek, Rudolf Ravelo, Alysia Alejandro, Justin Jack, Britt Bisceglia, Amos Alward."
+    return "Marcellus Mallow, Jared Jinkins, Cortez Carranco, Cortez Carranco, Shona Stanek, Rudolf Ravelo, Alysia Alejandro, Justin Jack, Britt Bisceglia, Amos Alward."
 
 
