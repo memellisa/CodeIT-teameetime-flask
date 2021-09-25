@@ -213,8 +213,8 @@ def find_sol(input):
         (key, value) = p1(
             grid, int(float(temp[0])), int(float(temp[1])))
         p1_ans[key] = value
-    p2_ans = p2(grid)
-    p3_ans = p3(grid)
+    p2_ans = 0
+    p3_ans = 0
 
     output["room"] = roomNumber
     output["p1"] = p1_ans
