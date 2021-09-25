@@ -12,10 +12,11 @@ logger = logging.getLogger(__name__)
 def evaluateAsteroid():
     data = request.get_json()
 
+    print(data)
+
     result = []
 
     for testcase in data:
-        print(type(testcase))
         temp_res = find_score(testcase)
         temp_dict = {}
         if temp_res != None:
