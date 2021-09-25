@@ -39,7 +39,7 @@ def evaluateStockHunter():
                 ri[y].append(tem)
                 rl[y].append((tem + gridDepth) % gridKey)
                 grid[y].append(convert_to_letter(tem, gridDepth, gridKey))
-            print(ri)
+            # print(ri)
         
         temp_dict = {}
         temp_dict["gridMap"] = [grid[key] for key in grid]
@@ -49,7 +49,7 @@ def evaluateStockHunter():
 
         newGrid= getNewGrid(gridMap)
         neighbors = getNeighbors(newGrid)
-        print(neighbors)
+        # print(neighbors)
         minCost = findPath(neighbors,(0,0),(2,2))
         print("Min cost ",minCost)
 
