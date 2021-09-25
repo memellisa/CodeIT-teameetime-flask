@@ -18,9 +18,14 @@ def evaluateAsteroid():
         print(type(testcase))
         temp_res = find_score(testcase)
         temp_dict = {}
-        temp_dict["input"] = testcase
-        temp_dict["score"] = temp_res[0]
-        temp_dict["origin"] = temp_res[1]
+        if temp_res != None:
+            temp_dict["input"] = testcase
+            temp_dict["score"] = temp_res[0]
+            temp_dict["origin"] = temp_res[1]
+        else:
+            temp_dict["input"] = testcase
+            temp_dict["score"] = 0
+            temp_dict["origin"] = 0
         result.append(temp_dict)
 
     return jsonify(result)
