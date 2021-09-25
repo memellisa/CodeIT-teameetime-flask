@@ -29,6 +29,7 @@ def evaluateAsteroid():
             temp_dict["origin"] = 0
         result.append(temp_dict)
 
+    print(result)
     print(jsonify(result))
 
     return jsonify(result)
