@@ -210,7 +210,7 @@ def find_sol(input):
     p1_ans = {}
     for individual in interestedIndividuals:
         (key, value) = p1(
-            grid, int(individual[0]), int(individual[2]))
+            grid, int(float(individual[0])), int(float(individual[2])))
         p1_ans[key] = value
     p2_ans = p2(grid)
     p3_ans = p3(grid)
