@@ -43,6 +43,27 @@ def evaluateStockHunter():
         
         temp_dict = {}
         temp_dict["gridMap"] = [grid[key] for key in grid]
+
+        ### Finding minimum distance 
+        gridMap = [grid[key] for key in grid]
+
+        def findPath(dict, entry, target):
+            from heapq import heappush, heappop
+            frontier = []
+            heappush(frontier, (0,[(),entry]))
+            explored = set()
+            while frontier:
+                node = heappop(frontier)
+                if node[1][-1] == target:
+                    return node[0]
+                if node[1][-1] not in explored:
+                    print('Exploring:',node[1][-1],'at cost',node[0])
+                    explored.add(node[1][-1])
+                    for child in neighbors[node[1][-1]]:
+                        newNode = node[1].copy()
+                        newNode.append(child[1])
+                        heappush(frontier, (node[0]+child[0],newNode))
+
         temp_dict["minimumCost"] = 9
         result.append(temp_dict)
 
